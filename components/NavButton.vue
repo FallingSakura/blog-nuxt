@@ -7,7 +7,7 @@ export default {
     },
     url: {
       type: String,
-      default: '/',
+      default: '#',
     }
   },
   data() {

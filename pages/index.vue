@@ -3,7 +3,7 @@
     <header>
      <h1>Welcome to my First Nuxt Project.</h1>
       <nav>
-        <nav-button title="Home" url="/"></nav-button>
+        <nav-button title="Home"></nav-button>
         <nav-button title="Archives"></nav-button>
         <nav-button title="Essays"></nav-button>
         <nav-button title="About"></nav-button>
