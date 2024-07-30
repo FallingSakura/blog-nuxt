@@ -18,7 +18,8 @@ export default {
 }
 </script>
 <template>
-  <button id="home"><a :href="url">{{ title }}</a></button>
+  <!-- <button id="home"><a :href="url">{{ title }}</a></button> -->
+  <button id="home"><NuxtLink :to="url">{{ title }}</NuxtLink></button>
 </template>
 
 <style scoped>

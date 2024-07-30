@@ -21,7 +21,6 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/css/tailwind.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -45,5 +44,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: '404',
+        path: '*',
+        component: resolve(__dirname, 'pages/NotFound.vue')
+      });
+    }
   }
+  // 添加自定义 router 值，自定义 nuxt 自带的钩子 extendRoutes，会自动执行。
+  // routes 是一个数组，里面是很多对象，对象就是自动创建的路由规则，现在我们添加一条规则，
+  // extendRoutes 函数接受两个参数，一个是 routes 数组，一个是解析相对路径为绝对路径的方法 resolve
 }

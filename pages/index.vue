@@ -6,6 +6,7 @@
         <nav-button title="Home"></nav-button>
         <nav-button title="Archives"></nav-button>
         <nav-button title="Essays"></nav-button>
+        <nav-button title="NotFound" url="./NotFound"></nav-button>
         <nav-button title="About"></nav-button>
       </nav>
     </header>
