@@ -1,0 +1,1 @@
+import{_,b as r}from"./DfgQXjLf.js";import{_ as c,c as s,a as e,b as t,q as l,o as m}from"./CIyNkphM.js";import"./BtrpeKbk.js";const u={};function p(o,d){const n=_,a=r;return m(),s("div",null,[e("header",null,[t(n)]),e("main",null,[l(o.$slots,"default")]),e("footer",null,[t(a,{title:"Back to HOME",url:"/"})])])}const x=c(u,[["render",p]]);export{x as default};

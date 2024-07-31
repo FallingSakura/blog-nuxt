@@ -1,0 +1,1 @@
+import{n as s,o as t,c as o,a as e,d as n}from"./CIyNkphM.js";const a=e("h1",null,[n("This is my "),e("b",null,"Archives")],-1),c=[a],d=s({__name:"Archives",setup(r){return(_,i)=>(t(),o("div",null,c))}});export{d as default};
