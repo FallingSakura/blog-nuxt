@@ -1,60 +1,70 @@
 <template>
   <div class="nav-bar">
     <div class="icon">
-      <i></i>
-      <h2 class="title">FallingBlog</h2>
+      <img src="https://cdn.jsdelivr.net/gh/FallingSakura/Source@main/img/202305211656851.webp"> 
+      <h2 class="title">FallingSakura</h2>
     </div>
     <div class="nav">
-      <div class="item">
-        <font-awesome-icon :icon="['fas', 'house']" />
-        <nav-button title="Home"></nav-button>
-      </div>
-      <nav-button title="Archives"></nav-button>
-      <nav-button title="Albums"></nav-button>
-      <nav-button title="About"></nav-button>
-    </div>
-    <div class="button">
-      <div class="search">
-        <i></i>
-      </div>
-      <div class="toggle-btn">
-        <i></i>
+      <nav-button title="Home" url="/" :ico="true">
+        <font-awesome icon="house"></font-awesome>
+      </nav-button>
+      <nav-button title="Archives" url="/archives" :ico="true">
+        <font-awesome icon="box-archive"></font-awesome>
+      </nav-button>
+      <nav-button title="Albums" url="/albums" :ico="true">
+        <font-awesome icon="images"></font-awesome>
+      </nav-button>
+      <nav-button title="About" url="/about" :ico="true">
+        <font-awesome icon="circle-info"></font-awesome>
+      </nav-button>
+      <div class="button">
+        <div class="search">
+          <i></i>
+        </div>
+        <div class="toggle-btn">
+          <i></i>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 .nav-bar {
   display: flex;
   height: 8vh;
   justify-content: space-between;
   flex-direction: row;
-  padding: 0 0 0 50px;
   background-color: skyblue;
-  width: 100%;
+  max-width: 100%;
 }
 .icon {
   display: flex;
+  width: 20%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   line-height: 100%;
   font-size: 1.8em;
+  font-weight: bold;
+  color: #fafafa;
+  padding-left: 30px;
+}
+.icon img {
+  width: 50px;
+  border-radius: 20%;
 }
 .nav {
   display: flex;
-  flex-grow: 1;
   line-height: 100%;
   color: #f0f0f0;
   font-size: 1em;
   justify-content: space-around;
   align-items: center;
-  padding: 0 25%;
 }
 .button {
   width: 100px;
-  height: auto;
-}
-.item {
-  color: #f0f0f0;
+  height: 100%;
 }
 </style>
