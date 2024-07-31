@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <nav-bar></nav-bar>
-    <nav-button title="NotFound" url="/NotFound" :ico="true">
+    <nav-button title="NotFound" url="./NotFound" :ico="true">
       <font-awesome icon="question"></font-awesome>
     </nav-button>
   </div>
