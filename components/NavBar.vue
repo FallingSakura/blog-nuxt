@@ -5,16 +5,16 @@
       <h2 class="title">FallingSakura</h2>
     </div>
     <div class="nav">
-      <nav-button title="Home" url="/" :ico="true">
+      <nav-button title="Home" url="./" :ico="true">
         <font-awesome icon="house"></font-awesome>
       </nav-button>
-      <nav-button title="Archives" url="/archives" :ico="true">
+      <nav-button title="Archives" url="./archives" :ico="true">
         <font-awesome icon="box-archive"></font-awesome>
       </nav-button>
-      <nav-button title="Albums" url="/albums" :ico="true">
+      <nav-button title="Albums" url="./albums" :ico="true">
         <font-awesome icon="images"></font-awesome>
       </nav-button>
-      <nav-button title="About" url="/about" :ico="true">
+      <nav-button title="About" url="./about" :ico="true">
         <font-awesome icon="circle-info"></font-awesome>
       </nav-button>
       <div class="button">
