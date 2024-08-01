@@ -37,8 +37,9 @@
   height: 8vh;
   justify-content: space-between;
   flex-direction: row;
-  background-color: skyblue;
-  max-width: 100%;
+  background-color: rgba(135, 207, 235, 0.415);
+  width: 100%;
+  z-index: 100;
 }
 .icon {
   display: flex;
