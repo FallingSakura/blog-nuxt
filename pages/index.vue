@@ -3,7 +3,14 @@ const route = useRoute()
 </script>
 
 <template>
-  <div>
-    <home></home>
-  </div>
+  <home></home>
 </template>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+</style>

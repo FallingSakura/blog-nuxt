@@ -1,23 +1,27 @@
 <template>
   <div class="nav-bar">
-    <div class="icon">
-      <img src="https://cdn.jsdelivr.net/gh/FallingSakura/Source@main/img/202305211656851.webp"> 
-      <h2 class="title">FallingSakura</h2>
-    </div>
+    <!-- <div class="icon"> -->
+      <nuxt-link class="icon" to="/">
+        <img src="https://cdn.jsdelivr.net/gh/FallingSakura/Source@main/img/202305211656851.webp"> 
+        <h2 class="title">FallingSakura</h2>
+      </nuxt-link>
+    <!-- </div> -->
     <div class="nav">
-      <nav-button title="Home" url="./" :ico="true">
-        <font-awesome icon="house"></font-awesome>
-      </nav-button>
-      <nav-button title="Archives" url="./archives" :ico="true">
-        <font-awesome icon="box-archive"></font-awesome>
-      </nav-button>
-      <nav-button title="Albums" url="./albums" :ico="true">
-        <font-awesome icon="images"></font-awesome>
-      </nav-button>
-      <nav-button title="About" url="./about" :ico="true">
-        <font-awesome icon="circle-info"></font-awesome>
-      </nav-button>
-      <div class="button">
+      <div class="button1">
+        <nav-button class="nav-button" title="Home" url="./" :ico="true">
+          <font-awesome icon="house"></font-awesome>
+        </nav-button>
+        <nav-button class="nav-button" title="Archives" url="./archives" :ico="true">
+          <font-awesome icon="box-archive"></font-awesome>
+        </nav-button>
+        <nav-button class="nav-button" title="Albums" url="./albums" :ico="true">
+          <font-awesome icon="images"></font-awesome>
+        </nav-button>
+        <nav-button class="nav-button" title="About" url="./about" :ico="true">
+          <font-awesome icon="circle-info"></font-awesome>
+        </nav-button>
+      </div>
+      <div class="button2">
         <div class="search">
           <i></i>
         </div>
@@ -28,10 +32,8 @@
     </div>
   </div>
 </template>
+
 <style scoped>
-* {
-  box-sizing: border-box;
-}
 .nav-bar {
   display: flex;
   height: 8vh;
@@ -45,12 +47,14 @@
   display: flex;
   width: 20%;
   align-items: center;
-  justify-content: space-around;
-  line-height: 100%;
-  font-size: 1.8em;
-  font-weight: bold;
+  justify-content: space-evenly;
   color: #fafafa;
   padding-left: 30px;
+}
+.title {
+  line-height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
 }
 .icon img {
   width: 50px;
@@ -61,11 +65,23 @@
   line-height: 100%;
   color: #f0f0f0;
   font-size: 1em;
-  justify-content: space-around;
+  flex-grow: 0.5;
+  justify-content: center;
   align-items: center;
 }
-.button {
-  width: 100px;
+.button2 {
+  aspect-ratio: 1 / 1;
   height: 100%;
+  background: rgba(17, 0, 0, 0.371);
+}
+.button1 {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-button {
+  margin-right: 50px;
 }
 </style>

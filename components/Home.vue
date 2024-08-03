@@ -18,7 +18,7 @@
 
       </div>
     </div>
-    <nav-button title="NotFound" url="./NotFound" :ico="true">
+    <nav-button class="test" title="NotFound" url="./NotFound" :ico="true">
       <font-awesome icon="question"></font-awesome>
     </nav-button>
   </div>
@@ -29,7 +29,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
-  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
   background: rgba(242, 242, 242, 1);
 }
 .content {
@@ -38,6 +40,8 @@
   align-items: center;
   position: relative;
   height: 100%;
+  width: 100%;
+  flex-grow: 1;
 }
 .articles {
   display: flex;
@@ -45,6 +49,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  height: fit-content;
+  width: 40%;
 }
 .sidebar {
   /* width: 20%; */
@@ -52,17 +58,21 @@
   height: 50vh;
   min-height: 400px;
   background-color: rgba(128, 128, 128, 0.599);
+  border-radius: 12px;
   position: fixed;
-  left: 60px;
-  top: 200px;
+  left: 5%;
+  top: 20%;
 }
 .catalogs {
   width: 400px;
   height: 100vh;
   position: fixed;
-  background-color: pink;
-  top: 0px;
-  right: 40px;
+  background-color: rgba(255, 192, 203, 0.35);
+  top: 0;
+  right: 2%;
   z-index: 1;
+}
+.test {
+  margin: 30px;
 }
 </style>

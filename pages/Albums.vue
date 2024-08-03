@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'test'
+  layout: 'pages'
 })
 </script>
 <template>

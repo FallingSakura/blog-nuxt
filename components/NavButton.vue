@@ -18,12 +18,10 @@ const props = defineProps({
 </script>
 <template>
   <!-- <button id="home"><a :href="url">{{ title }}</a></button> -->
-  <div class="nav-btn">
+  <NuxtLink :to="props.url" class="nav-btn">
     <div class="ico" v-if="props.ico"><slot></slot></div>
-    <NuxtLink :to="props.url">
-      {{ props.title }}
-    </NuxtLink>
-  </div>
+    <span>{{ props.title }}</span>
+  </NuxtLink>
 </template>
 
 <style scoped>
@@ -34,13 +32,13 @@ const props = defineProps({
   align-items: center;
   color: rgb(255, 255, 255);
   background: rgba(99, 95, 95, 0.229);
-  padding: 8px 10px;
+  padding: 14px 18px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   width: 100px;
   min-width: fit-content;
   max-width: 200px;
-  margin: 30px;
+  height: fit-content;
 }
 .ico {
   margin-right: 10px;
