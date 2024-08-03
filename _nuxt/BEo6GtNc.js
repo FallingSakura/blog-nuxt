@@ -1,0 +1,1 @@
+import{n as o,o as a,c as t,p as _,e as d,a as s,_ as n}from"./BE-iDqcD.js";const c=e=>(_("data-v-52c2d991"),e=e(),d(),e),p=c(()=>s("h1",null,"Archives",-1)),r=c(()=>s("div",{class:"archive"},[s("h2",{class:"year"},"2024")],-1)),i=[p,r],h=o({__name:"Archives",setup(e){return(l,v)=>(a(),t("div",null,i))}}),m=n(h,[["__scopeId","data-v-52c2d991"]]);export{m as default};
