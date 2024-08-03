@@ -47,7 +47,7 @@
 }
 .title {
   line-height: 100%;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 .icon img {

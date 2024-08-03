@@ -36,7 +36,7 @@ main {
 }
 .content {
   min-height: 100%;
-  width: 60%;
+  width: 50%;
   background: rgba(240, 240, 240, 1);
   padding: 50px;
   border-radius: 10px;

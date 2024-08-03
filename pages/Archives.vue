@@ -5,8 +5,20 @@ definePageMeta({
 </script>
 <template>
   <div>
-    <h1>This is my <b>Archives</b></h1>
+    <h1>Archives</h1>
+    <div class="archive">
+      <h2 class="year">2024</h2>
+    </div>
   </div>
 </template>
 
-<style></style>
+<style scoped>
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+.year {
+  font-size: 2em;
+  font-weight: 600;
+}
+</style>
