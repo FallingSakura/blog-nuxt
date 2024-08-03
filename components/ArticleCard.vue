@@ -1,6 +1,6 @@
 <script setup lang="ts">
 class Card {
-  
+
 }
 const props = defineProps({
   title: {
@@ -34,9 +34,7 @@ const props = defineProps({
 <style scoped>
 .article-card {
   position: relative;
-  max-width: 700px;
-  max-height: 300px;
-  width: 700px;
+  width: 800px;
   height: 300px;
   background: #fff;
   border-radius: 12px;

@@ -8,3 +8,5 @@ definePageMeta({
     <h1>This is my <b>Archives</b></h1>
   </div>
 </template>
+
+<style></style>

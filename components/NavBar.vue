@@ -21,14 +21,7 @@
           <font-awesome icon="circle-info"></font-awesome>
         </nav-button>
       </div>
-      <div class="button2">
-        <div class="search">
-          <i></i>
-        </div>
-        <div class="toggle-btn">
-          <i></i>
-        </div>
-      </div>
+      <search-button class="search"></search-button>
     </div>
   </div>
 </template>
@@ -39,8 +32,9 @@
   height: 8vh;
   justify-content: space-between;
   flex-direction: row;
-  background-color: rgba(135, 207, 235, 0.415);
+  background-color: rgba(0, 0, 0, 0.415);
   width: 100%;
+  overflow: hidden;
   z-index: 100;
 }
 .icon {
@@ -65,14 +59,9 @@
   line-height: 100%;
   color: #f0f0f0;
   font-size: 1em;
-  flex-grow: 0.5;
+  flex-grow: 0.7;
   justify-content: center;
   align-items: center;
-}
-.button2 {
-  aspect-ratio: 1 / 1;
-  height: 100%;
-  background: rgba(17, 0, 0, 0.371);
 }
 .button1 {
   flex-grow: 1;
