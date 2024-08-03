@@ -2,9 +2,7 @@
   <div class="body">
     <nav-bar></nav-bar>
     <div class="content">
-      <div class="sidebar">
-
-      </div>
+      <side-bar class="sidebar"></side-bar>
       <div class="articles">
         <article-card></article-card>
         <article-card></article-card>
@@ -33,13 +31,13 @@
   width: 100%;
   height: fit-content;
   background: rgba(242, 242, 242, 1);
+  z-index: -100;
 }
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100%;
   width: 100%;
   flex-grow: 1;
 }
@@ -53,12 +51,11 @@
   width: 40%;
 }
 .sidebar {
-  /* width: 20%; */
-  aspect-ratio: 39 / 54;
-  height: 50vh;
+  /* aspect-ratio: 39 / 54;
+  width: 20%;
   min-height: 400px;
   background-color: rgba(128, 128, 128, 0.599);
-  border-radius: 12px;
+  border-radius: 12px; */
   position: fixed;
   left: 5%;
   top: 20%;
@@ -68,7 +65,7 @@
   height: 100vh;
   position: fixed;
   background-color: rgba(255, 192, 203, 0.35);
-  top: 0;
+  top: 0px;
   right: 2%;
   z-index: 1;
 }
