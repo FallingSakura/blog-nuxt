@@ -1,17 +1,26 @@
-<script setup lang="ts">
-class Card {
-
-}
+<script setup>
 const props = defineProps({
-  title: {
-    type: String,
-    default: "Hello World",
-  },
-  date: {
-    type: String,
-    default: "2024/08/03 15:00:00",
-  }
+  // props: {
+    title: {
+      type: String,
+      default: "Hello World",
+    },
+    date: {
+      type: String,
+      default: "2024/08/03 15:00:00",
+    },
+    description: {
+      type: String,
+      default: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quod. Eligendi eum deleniti natus iure culpa."
+    },
+    tags: {
+      type: Array,
+      default: ['Test_tag', 'tag', 'another'],
+    }
+  //   type: Object,
+  // }
 })
+console.log(props);
 </script>
 <template>
   <div class="article-card">
@@ -21,11 +30,12 @@ const props = defineProps({
     <div class="subtitles">
       <p class="date">{{ props.date }}</p>
       <div class="box">
-        <tag-button class="button" title="Test_test"></tag-button>
+        <!-- <tag-button class="button" title="Test_test"></tag-button>
         <tag-button class="button"></tag-button>
-        <tag-button class="button"></tag-button>
+        <tag-button class="button"></tag-button> -->
+        <tag-button v-for="tag in props.tags" class="button" :title="tag"></tag-button>
       </div>
-      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quod. Eligendi eum deleniti natus iure culpa.</p>
+      <p class="description">{{ props.description }}</p>
     </div>
     <img class="banner">
   </div>
@@ -34,8 +44,7 @@ const props = defineProps({
 <style scoped>
 .article-card {
   position: relative;
-  width: 800px;
-  height: 300px;
+  width: 100%;
   background: #fff;
   border-radius: 12px;
   border: 1px solid rgba(128, 128, 128, 0.469);
@@ -49,7 +58,7 @@ const props = defineProps({
   box-shadow: black 0 0 2px;
 }
 .article-card .title {
-  font-size: 2em;
+  font-size: 1.6em;
   color:rgba(0, 0, 0, 0.871);
 }
 .subtitles {
@@ -63,15 +72,15 @@ const props = defineProps({
 }
 
 .subtitles .box {
-  width: 100%;
-  height: 50px;
+  width: 52%;
   /* background-color: rgb(255, 119, 119); */
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;  
 }
 .subtitles .box .button {
-  margin-right: 10px;
+  margin: 10px 10px 0 0;
 }
 .banner {
   position: absolute;

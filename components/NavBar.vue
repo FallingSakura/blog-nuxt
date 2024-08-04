@@ -1,3 +1,5 @@
+<script setup>
+</script>
 <template>
   <div class="nav-bar">
     <!-- <div class="icon"> -->
@@ -29,7 +31,7 @@
 <style scoped>
 .nav-bar {
   display: flex;
-  height: 8vh;
+  height: 66px;
   justify-content: space-between;
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.415);
@@ -39,9 +41,9 @@
 }
 .icon {
   display: flex;
-  width: 20%;
+  width: 40%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   color: #fafafa;
   padding-left: 30px;
 }
@@ -52,6 +54,7 @@
 }
 .icon img {
   width: 50px;
+  margin-right: 6%;
   border-radius: 20%;
 }
 .nav {
@@ -72,5 +75,15 @@
 }
 .nav-button {
   margin-right: 50px;
+}
+@media (max-width: 1600px) {
+  .nav-button {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .nav-button {
+    display: none;
+  }
 }
 </style>

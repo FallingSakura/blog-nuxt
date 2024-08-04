@@ -1,16 +1,26 @@
+<script setup>
+const title = "This is My Blog";
+const obj = {
+  title, 
+  date: "2024/08/04 08:00",
+  description: "HaHa",
+  tags: ['1', '2', '3', 'haha', 'yeah'],
+};
+const objs = {
+  0: obj,
+  1: {},
+  2: {},
+  3: {},
+  4: {},
+};
+</script>
 <template>
   <div class="body">
     <nav-bar></nav-bar>
     <div class="content">
       <side-bar class="sidebar"></side-bar>
       <div class="articles">
-        <article-card></article-card>
-        <article-card></article-card>
-        <article-card></article-card>
-        <article-card></article-card>
-        <article-card></article-card>
-        <article-card></article-card>
-        <article-card></article-card>
+        <article-card v-bind="obj" v-for="obj in objs"></article-card>
       </div>
       <div class="catalogs">
 
@@ -24,14 +34,11 @@
 
 <style scoped>
 .body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-  align-items: center;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   background: rgba(242, 242, 242, 1);
   z-index: -100;
+  min-height: 100vh;
 }
 .content {
   display: flex;
@@ -39,7 +46,6 @@
   align-items: center;
   position: relative;
   width: 100%;
-  flex-grow: 1;
 }
 .articles {
   display: flex;
@@ -58,7 +64,7 @@
   border-radius: 12px; */
   position: fixed;
   left: 5%;
-  top: 20%;
+  top: 12%;
 }
 .catalogs {
   width: 400px;
@@ -67,9 +73,52 @@
   background-color: rgba(255, 192, 203, 0.35);
   top: 0px;
   right: 2%;
-  z-index: 1;
 }
 .test {
-  margin: 30px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+@media (max-width: 1600px) {
+  .catalogs {
+    display: none;
+  }
+  .sidebar {
+    position: absolute;
+    top: 3%;
+  }
+  .test {
+    display: none;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1600px) {
+  .content {
+    justify-content: flex-end;
+    padding-right: 7%;
+  }
+  .articles {
+    width: 55%;
+  }
+} 
+@media (max-width: 1100px) {
+  .content {
+    padding-right: unset;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .articles {
+    width: 80%;
+  }
+  .sidebar {
+    position: relative;
+    top: unset;
+    left: unset;  
+  }
+}
+@media (max-width: 700px) {
+  .articles {
+    width: 90%;
+  }
 }
 </style>

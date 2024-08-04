@@ -14,8 +14,9 @@ export default defineNuxtConfig({
   fontawesome: {
     icons: {
       solid: ['house', 'box-archive', 'images', 'circle-info',
-        'question', 'search'
+        'question', 'search', 'angle-left'
       ],
     }
-  }
+  },
+  css: ['~/assets/css/media.css'],
 })
