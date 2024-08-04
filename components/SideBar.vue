@@ -70,16 +70,17 @@
     justify-content: center;
   }
   .info {
-    width: 65%;
+    width: 60%;
   }
   .items {
-    width: 35%;
+    width: 40%;
     /* text-align: center; */
     /* display: flex; */
   }
   .item {
     width: 15vw;
-    height: 6vh; 
+    height: 40px;
+    /* height: 6vh; */
   }
 }
 @media (min-width: 700px) and (max-width: 1100px) {
