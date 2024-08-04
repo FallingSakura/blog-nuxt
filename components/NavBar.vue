@@ -37,7 +37,6 @@
   background-color: rgba(0, 0, 0, 0.415);
   width: 100%;
   overflow: hidden;
-  z-index: 100;
 }
 .icon {
   display: flex;

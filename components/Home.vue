@@ -37,7 +37,6 @@ const objs = {
   width: 100%;
   height: 100%;
   background: rgba(242, 242, 242, 1);
-  z-index: -100;
   min-height: 100vh;
 }
 .content {
@@ -68,10 +67,10 @@ const objs = {
 }
 .catalogs {
   width: 400px;
-  height: 100vh;
+  height: 90vh;
   position: fixed;
   background-color: rgba(255, 192, 203, 0.35);
-  top: 0px;
+  bottom: 0;
   right: 2%;
 }
 .test {
