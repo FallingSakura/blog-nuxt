@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(242, 242, 242, 1);
 }
 header {
   width: 100%;
@@ -37,7 +38,7 @@ main {
 .content {
   min-height: 100%;
   width: 50%;
-  background: rgba(240, 240, 240, 1);
+  background: rgba(230, 230, 230, 1);
   padding: 50px;
   border-radius: 10px;
 }

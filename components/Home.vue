@@ -3,7 +3,7 @@ const title = "This is My Blog";
 const obj = {
   title, 
   date: "2024/08/04 08:00",
-  description: "HaHa",
+  description: "HaHaHAHAHAHAHA",
   tags: ['1', '2', '3', 'haha', 'yeah'],
 };
 const objs = {
@@ -20,7 +20,7 @@ const objs = {
     <div class="content">
       <side-bar class="sidebar"></side-bar>
       <div class="articles">
-        <article-card v-bind="obj" v-for="obj in objs"></article-card>
+        <article-card v-bind="ob" v-for="ob in objs"></article-card>
       </div>
       <div class="catalogs">
 
@@ -63,10 +63,12 @@ const objs = {
   border-radius: 12px; */
   position: fixed;
   left: 5%;
-  top: 12%;
+  /* top: 12%; */
+  /* align-self: normal; */
 }
 .catalogs {
-  width: 400px;
+  width: 20%;
+  min-width: 400px;
   height: 90vh;
   position: fixed;
   background-color: rgba(255, 192, 203, 0.35);
