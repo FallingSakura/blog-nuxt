@@ -15,29 +15,30 @@ const props = defineProps({
     },
     tags: {
       type: Array,
-      default: ['Test_tag', 'tag', 'another'],
+      default: () => ['Test_tag', 'tag', 'another'],
+    },
+    src: {
+      type: String,
+      default: null,
     }
   //   type: Object,
   // }
 })
-console.log(props);
 </script>
 <template>
   <div class="article-card">
-    <h1 class="title">
+    <h1>
+      
       {{ props.title }}
     </h1>
     <div class="subtitles">
       <p class="date">{{ props.date }}</p>
       <div class="box">
-        <!-- <tag-button class="button" title="Test_test"></tag-button>
-        <tag-button class="button"></tag-button>
-        <tag-button class="button"></tag-button> -->
-        <tag-button v-for="tag in props.tags" class="button" :title="tag"></tag-button>
+        <tag-button v-for="tag in props.tags" :key="tag._id" class="button" :title="tag"/>
       </div>
       <p class="description">{{ props.description }}</p>
     </div>
-    <img class="banner">
+    <div class="banner" :style="`background-image: url(${props.src})`"></div>
   </div>
 </template>
 
@@ -45,34 +46,51 @@ console.log(props);
 .article-card {
   position: relative;
   width: 100%;
+  min-height: 220px;  
   background: #fff;
-  border-radius: 12px;
-  border: 1px solid rgba(128, 128, 128, 0.469);
-  position: relative;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
   margin-top: 20px;
   transition: all 0.2s ease;
   padding: 20px;
   overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.article-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #ff6b6b, #f94d6a, #f9d423, #ff4b1f);
+  z-index: 0;
+  transition: opacity 0.3s;
+  border-radius: 50%;
+  opacity: 0;
 }
 .article-card:hover {
-  box-shadow: black 0 0 2px;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.article-card .title {
+.article-card:hover::before {
+  opacity: 0.1;
+}
+.article-card h1 {
   font-size: 1.6em;
-  color:rgba(0, 0, 0, 0.871);
+  color: #333;
 }
 .subtitles {
-  /* background: grey; */
   width: 100%;
   height: fit-content;
-  /* padding: 5px; */
 }
 .subtitles .date {
-  color: rgb(142, 115, 115);
+  color: #aaa;
 }
 
 .subtitles .box {
-  width: 52%;
+  width: 50%;
   /* background-color: rgb(255, 119, 119); */
   display: flex;
   align-items: center;
@@ -80,7 +98,7 @@ console.log(props);
   flex-wrap: wrap;  
 }
 .subtitles .box .button {
-  margin: 10px 10px 0 0;
+  margin: 8px 8px 0 0;
 }
 .banner {
   position: absolute;
@@ -88,11 +106,23 @@ console.log(props);
   height: 100%;
   right: 0;
   top: 0;
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .subtitles .description {
+  color: #666;
   width: 50%;
   font-size: 0.9em;
-  padding-right:10px;
-  padding-top: 10px;
+  margin-right:10px;
+  margin-top: 10px;
+}
+@media (max-width: 700px) {
+  .banner {
+    display: none;
+  }
+  .subtitles .box {
+    width: 100%;
+  }
 }
 </style>

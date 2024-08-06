@@ -1,17 +1,17 @@
 <template>
   <div class="body">
     <header>
-      <nav-bar></nav-bar>
+      <nav-bar/>
     </header>
     <main>
-      <div></div>
+      <!-- <div></div> -->
       <div class="content">
-        <slot></slot>
+        <slot/>
       </div>
-      <div></div>
+      <!-- <div></div> -->
     </main>
     <footer>
-      <nav-button title="Back to HOME" url="/"></nav-button>
+      <nav-button title="Back to HOME" url="/"/>
     </footer>
   </div>
 </template>

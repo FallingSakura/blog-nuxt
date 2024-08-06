@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const route = useRoute()
 </script>
 
 <template>
-  <home></home>
+  <home-page/>
 </template>
 
 <style>

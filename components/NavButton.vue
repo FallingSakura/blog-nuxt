@@ -3,6 +3,7 @@ import { defineProps } from 'vue';
 const props = defineProps({
   title: {
     type: String,
+    default: 'Title',
     require: true,
   },
   url: {
@@ -19,19 +20,18 @@ const props = defineProps({
 <template>
   <!-- <button id="home"><a :href="url">{{ title }}</a></button> -->
   <NuxtLink :to="props.url" class="nav-btn">
-    <div class="ico" v-if="props.ico"><slot></slot></div>
+    <div v-if="props.ico" class="ico"><slot></slot></div>
     <span>{{ props.title }}</span>
   </NuxtLink>
 </template>
 
 <style scoped>
 .nav-btn {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  background: rgba(99, 95, 95, 0.229);
+  background: rgba(52, 48, 48, 0.238);
   padding: 14px 18px;
   border-radius: 5px;
   font-size: 18px;

@@ -19,5 +19,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   updateContent();
-  windows.addEventListener('resize', updateContent);
+  window.addEventListener('resize', updateContent);
 })

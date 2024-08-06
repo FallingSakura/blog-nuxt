@@ -11,19 +11,19 @@
     <div class="nav">
       <div class="button1">
         <nav-button class="nav-button" title="Home" url="./" :ico="true">
-          <font-awesome icon="house"></font-awesome>
+          <font-awesome icon="house"/>
         </nav-button>
         <nav-button class="nav-button" title="Archives" url="./archives" :ico="true">
-          <font-awesome icon="box-archive"></font-awesome>
+          <font-awesome icon="box-archive"/>
         </nav-button>
         <nav-button class="nav-button" title="Albums" url="./albums" :ico="true">
-          <font-awesome icon="images"></font-awesome>
+          <font-awesome icon="images"/>
         </nav-button>
         <nav-button class="nav-button" title="About" url="./about" :ico="true">
-          <font-awesome icon="circle-info"></font-awesome>
+          <font-awesome icon="circle-info"/>
         </nav-button>
       </div>
-      <search-button class="search"></search-button>
+      <search-button class="search"/>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@
   height: 66px;
   justify-content: space-between;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.415);
+  background-color: rgba(68, 68, 68, 0.415);
   width: 100%;
   overflow: hidden;
 }

@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/eslint": "^0.5.0",
     "nuxt": "^3.12.4",
     "vue": "latest"
   },
@@ -19,7 +20,6 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@nuxt/eslint": "^0.4.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@vesp/nuxt-fontawesome": "^1.0.4",
     "gh-pages": "^6.1.1"

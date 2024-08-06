@@ -15,12 +15,15 @@ const props = defineProps({
 .tag-button {
   min-width: 60px;
   min-height: 32px;
-  background-color: rgba(121, 121, 121, 0.336);
+  background-color: #ff6b6bc0;
   border-radius: 10px;
-  color: grey;
+  color: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 12px;
+  padding: 4px 15px;
+}
+.tag-button:hover {
+  background-color: #ff4b4b;
 }
 </style>

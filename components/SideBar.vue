@@ -8,18 +8,10 @@
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aliquam placeat mollitia voluptate dicta explicabo suscipit ut accusantium ipsam vitae nihil provident, molestias maiores corporis beatae consequatur modi saepe expedita.</p>
     </div>
     <ul class="items">
-      <li class="item">
-        <span>Link 1</span>
-      </li>
-      <li class="item">
-        <span>Link 2</span>
-      </li>
-      <li class="item">
-        <span>Link 3</span>
-      </li>
-      <li class="item">
-        <span>Link 4</span>
-      </li>
+      <link-button class="item"/>
+      <link-button class="item"/>
+      <link-button class="item"/>
+      <link-button class="item"/>
     </ul>
   </div>
 </template>
@@ -44,21 +36,11 @@
   /* background: grey; */
   width: 100%;
   height: 60%;
-  color: rgba(255, 255, 255, 0.728);
   padding: 10px;
   display: inline-block;
 }
 .item {
-  width: 80%;
-  height: 20%;
-  background: #9f9f9f53;
-  margin-top: 12px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-  font-weight: 600;
+  margin-top: 20px;
 }
 @media (max-width: 1100px) {
   .sidebar {
@@ -101,10 +83,15 @@
   .items {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: unset;
   }
   .item {
     margin-right: 5%;
-    min-width: 80px;
+    min-width: 100px;
   }
 }
 </style>

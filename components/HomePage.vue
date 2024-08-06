@@ -3,8 +3,9 @@ const title = "This is My Blog";
 const obj = {
   title, 
   date: "2024/08/04 08:00",
-  description: "HaHaHAHAHAHAHA",
+  // description: "HaHaHAHAHAHAHA",
   tags: ['1', '2', '3', 'haha', 'yeah'],
+  src: "https://cdn.jsdelivr.net/gh/FallingSakura/Source@main/img/202408061546383.webp",
 };
 const objs = {
   0: obj,
@@ -16,18 +17,16 @@ const objs = {
 </script>
 <template>
   <div class="body">
-    <nav-bar></nav-bar>
+    <nav-bar/>
     <div class="content">
-      <side-bar class="sidebar"></side-bar>
+      <side-bar class="sidebar"/>
       <div class="articles">
-        <article-card v-bind="ob" v-for="ob in objs"></article-card>
+        <article-card v-for="ob in objs" v-bind="ob" :key="ob._id"/>
       </div>
-      <div class="catalogs">
-
-      </div>
+      <div class="catalogs"></div>
     </div>
     <nav-button class="test" title="NotFound" url="./NotFound" :ico="true">
-      <font-awesome icon="question"></font-awesome>
+      <font-awesome icon="question"/>
     </nav-button>
   </div>
 </template>
@@ -56,15 +55,9 @@ const objs = {
   width: 40%;
 }
 .sidebar {
-  /* aspect-ratio: 39 / 54;
-  width: 20%;
-  min-height: 400px;
-  background-color: rgba(128, 128, 128, 0.599);
-  border-radius: 12px; */
   position: fixed;
   left: 5%;
-  /* top: 12%; */
-  /* align-self: normal; */
+  top: 18%;
 }
 .catalogs {
   width: 20%;
@@ -73,12 +66,12 @@ const objs = {
   position: fixed;
   background-color: rgba(255, 192, 203, 0.35);
   bottom: 0;
-  right: 2%;
+  right: 2vh;
 }
 .test {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 2vh;
+  left: 2vh;
 }
 @media (max-width: 1600px) {
   .catalogs {
