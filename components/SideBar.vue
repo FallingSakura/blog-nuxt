@@ -1,17 +1,20 @@
-<script setup>
-
-</script>
+<script setup></script>
 <template>
   <div class="sidebar">
     <div class="info">
       <h2>Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aliquam placeat mollitia voluptate dicta explicabo suscipit ut accusantium ipsam vitae nihil provident, molestias maiores corporis beatae consequatur modi saepe expedita.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aliquam
+        placeat mollitia voluptate dicta explicabo suscipit ut accusantium ipsam
+        vitae nihil provident, molestias maiores corporis beatae consequatur
+        modi saepe expedita.
+      </p>
     </div>
     <ul class="items">
-      <link-button class="item"/>
-      <link-button class="item"/>
-      <link-button class="item"/>
-      <link-button class="item"/>
+      <link-button class="item" />
+      <link-button class="item" />
+      <link-button class="item" />
+      <link-button class="item" />
     </ul>
   </div>
 </template>
@@ -42,7 +45,7 @@
 .item {
   margin-top: 20px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .sidebar {
     width: 75%;
     aspect-ratio: unset;
@@ -65,7 +68,7 @@
     /* height: 6vh; */
   }
 }
-@media (min-width: 700px) and (max-width: 1100px) {
+@media (min-width: 700px) and (max-width: 1024px) {
   .info {
     margin-right: 5vw;
   }

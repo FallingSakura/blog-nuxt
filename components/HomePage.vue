@@ -1,32 +1,32 @@
 <script setup>
-const title = "This is My Blog";
+const title = 'This is My Blog'
 const obj = {
-  title, 
-  date: "2024/08/04 08:00",
+  title,
+  date: '2024/08/04 08:00',
   // description: "HaHaHAHAHAHAHA",
   tags: ['1', '2', '3', 'haha', 'yeah'],
-  src: "https://cdn.jsdelivr.net/gh/FallingSakura/Source@main/img/202408061546383.webp",
-};
+  src: 'https://cdn.jsdelivr.net/gh/FallingSakura/Source@main/img/202408061546383.webp'
+}
 const objs = {
   0: obj,
   1: {},
   2: {},
   3: {},
-  4: {},
-};
+  4: {}
+}
 </script>
 <template>
   <div class="body">
-    <nav-bar/>
+    <nav-bar />
     <div class="content">
-      <side-bar class="sidebar"/>
+      <side-bar class="sidebar" />
       <div class="articles">
-        <article-card v-for="ob in objs" v-bind="ob" :key="ob._id"/>
+        <article-card v-for="ob in objs" v-bind="ob" :key="ob._id" />
       </div>
       <div class="catalogs"></div>
     </div>
     <nav-button class="test" title="NotFound" url="./NotFound" :ico="true">
-      <font-awesome icon="question"/>
+      <font-awesome icon="question" />
     </nav-button>
   </div>
 </template>
@@ -93,8 +93,8 @@ const objs = {
   .articles {
     width: 55%;
   }
-} 
-@media (max-width: 1100px) {
+}
+@media (max-width: 1024px) {
   .content {
     padding-right: unset;
     flex-direction: column;
@@ -107,7 +107,7 @@ const objs = {
   .sidebar {
     position: relative;
     top: unset;
-    left: unset;  
+    left: unset;
   }
 }
 @media (max-width: 700px) {
